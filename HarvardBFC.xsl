@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!-- Place this file in "%appdata%\Microsoft\Bibliography\Style" and restart MS Word -->
+
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt"
 				xmlns:b="http://schemas.openxmlformats.org/officeDocument/2006/bibliography" xmlns:t="http://www.microsoft.com/temp">
 
@@ -12,147 +14,21 @@
 	<xsl:template name="Start">
 		<xsl:choose>
 			<xsl:when test="b:Version">
-				<xsl:text>2010.2.02</xsl:text>
+				<xsl:text>2019.9.26</xsl:text>
 			</xsl:when>
 
 			<xsl:when test="b:XslVersion">
-				<xsl:text>2008</xsl:text>
+				<xsl:text>2019</xsl:text>
 			</xsl:when>
 
       <xsl:when test="b:StyleNameLocalized">
         <xsl:choose>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1033'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1025'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1037'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1041'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='2052'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1028'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1042'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1036'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1040'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='3082'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1043'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1031'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1046'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1049'">
-            <xsl:text>Harvard — Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1035'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1032'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1081'">
-            <xsl:text>हार्वर्ड - एंग्लिया</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1054'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1057'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1086'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1066'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1053'">
-            <xsl:text>Harvard – Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1069'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1027'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1030'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1110'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1044'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1061'">
-            <xsl:text>Harvard ‒ Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1062'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1063'">
-            <xsl:text>Harvardas – Anglija</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1045'">
-            <xsl:text>Harvard — Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='2070'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1029'">
-            <xsl:text>Harvard – Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1055'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1038'">
-            <xsl:text>Harvard — Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1048'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1058'">
-            <xsl:text>Гарвард – Англія</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1026'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1050'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1087'">
-            <xsl:text>Гарвард-Англия мәнері</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='2074'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='3098'">
-            <xsl:text>Harvard - Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1051'">
-            <xsl:text>Harvard – Anglia</xsl:text>
-          </xsl:when>
-          <xsl:when test="b:StyleNameLocalized/b:Lcid='1060'">
-            <xsl:text>Harvardski način citiranja</xsl:text>
-          </xsl:when>
+        	<xsl:when test="b:StyleNameLocalized/b:Lcid='1033'">
+	        	<xsl:text>Harvard - BFC</xsl:text>
+	        </xsl:when>
+        	<xsl:otherwise>
+        		<xsl:text>Harvard - BFC</xsl:text>
+        	</xsl:otherwise>
         </xsl:choose>
       </xsl:when>
       
@@ -4898,13 +4774,11 @@
 		<xsl:choose>
 			<xsl:when test ="$cYear=1">
 				<xsl:value-of select = "b:Year"/>
-				<xsl:call-template name = "templ_prop_Dot"/>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:call-template name ="templ_str_NoDateShortUnCap"/>
 			</xsl:otherwise>
 		</xsl:choose>
-		<xsl:call-template name="templ_prop_Space"/>
 	</xsl:template>
 
 	<xsl:template name="BibDisplayYearCase">
@@ -5291,7 +5165,7 @@
 							<xsl:when test="$cMonthAccessed!=0">
 								<xsl:if test ="$cYearAccessed!=0">
 									<xsl:call-template name ="templ_prop_Space"/>
-									<xsl:call-template name ="templ_prop_SecondaryOpen"/>
+									<xsl:call-template name ="templ_prop_OpenBracket"/>
 									<xsl:call-template name ="FindReplaceString">
 										<xsl:with-param name="originalString" select="string($str_AccessedCap)"/>
 										<xsl:with-param name="stringToBeReplaced" select="' %1'"/>
@@ -5302,20 +5176,20 @@
 									<xsl:value-of select="b:MonthAccessed"/>
 									<xsl:call-template name ="templ_prop_Space"/>
 									<xsl:value-of select="b:YearAccessed"/>
-									<xsl:call-template name ="templ_prop_SecondaryClose"/>
+									<xsl:call-template name ="templ_prop_CloseBracket"/>
 									<xsl:call-template name ="templ_prop_Dot"/>
 								</xsl:if>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:call-template name ="templ_prop_Space"/>
-								<xsl:call-template name ="templ_prop_SecondaryOpen"/>
+								<xsl:call-template name ="templ_prop_OpenBracket"/>
 								<xsl:call-template name ="FindReplaceString">
 									<xsl:with-param name="originalString" select="string($str_AccessedCap)"/>
 									<xsl:with-param name="stringToBeReplaced" select="' %1'"/>
 									<xsl:with-param name="stringReplacement" select="$prop_Space"/>
 								</xsl:call-template>
 								<xsl:value-of select="b:YearAccessed"/>
-								<xsl:call-template name ="templ_prop_SecondaryClose"/>
+								<xsl:call-template name ="templ_prop_CloseBracket"/>
 								<xsl:call-template name ="templ_prop_Dot"/>
 							</xsl:otherwise>
 						</xsl:choose>
@@ -5365,9 +5239,7 @@
 			<br>
 				<xsl:text>Available at:</xsl:text>
 				<xsl:call-template name ="templ_prop_Space"/>
-				<u>
-					<xsl:value-of select="b:URL"/>
-				</u>
+				<xsl:value-of select="b:URL"/>
 			</br>
 		</xsl:if>
 	</xsl:template>
@@ -5422,7 +5294,9 @@
 						<xsl:call-template name = "BibDisplayAuthor">
 							<xsl:with-param name ="DisplayEditorIfAuthorUnavailale" select="'true'" />
 						</xsl:call-template>
-						<xsl:call-template name = "BibDisplayYear"/>
+						<xsl:text>(</xsl:text>
+							<xsl:call-template name = "BibDisplayYear"/>
+						<xsl:text>)</xsl:text>
 						<i>
 							<xsl:call-template name = "BibDisplayTitle"/>
 						</i>
@@ -5471,11 +5345,12 @@
 					<xsl:element name="p">
 						<xsl:call-template name ="BibAddParagraphAttributes"/>
 						<xsl:call-template name = "BibDisplayAuthor"/>
-						<xsl:call-template name = "BibDisplayYear"/>
+						<xsl:text>(</xsl:text>
+							<xsl:call-template name = "BibDisplayYear"/>
+						<xsl:text>) </xsl:text>
 						<i>
 							<xsl:call-template name ="BibDisplayTitle"/>
 						</i>
-						<xsl:call-template name ="BibDisplayStrOnline"/>
 						<xsl:call-template name ="BibDisplayURL"/>
 						<xsl:call-template name ="BibDisplayAccessedDates"/>
 					</xsl:element>
@@ -5833,7 +5708,7 @@
 
 
 							<xsl:if test="b:FirstAuthor">
-								<xsl:call-template name ="templ_prop_OpenBracket"/>
+								<xsl:value-of select="b:FirstAuthor"/>
 							</xsl:if>
 
 							<xsl:if test="b:PagePrefix">
@@ -5859,7 +5734,9 @@
 							</xsl:if>
 
 							<xsl:if test ="$cNoYear=0">
-								<xsl:value-of select="$year"/>
+								<xsl:text>(</xsl:text>
+									<xsl:value-of select="$year"/>
+								<xsl:text>)</xsl:text>
 								<xsl:if test ="$volpagesInfo!=''">
 									<xsl:call-template name ="templ_prop_ListSeparator"/>
 								</xsl:if>
@@ -5874,7 +5751,7 @@
 							</xsl:if>
 
 							<xsl:if test="b:LastAuthor">
-								<xsl:call-template name="templ_prop_CloseBracket"/>
+								<xsl:value-of select="b:LastAuthor"/>
 							</xsl:if>
 							<xsl:if test="not(b:LastAuthor)">
 								<xsl:call-template name="templ_prop_GroupSeparator"/>
