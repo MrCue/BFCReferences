@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="utf-8"?>
 
 <!-- Place this file in "%appdata%\Microsoft\Bibliography\Style" and restart MS Word -->
@@ -5730,7 +5729,7 @@
 							<xsl:if test="$cNoAuthor=0">
 								<xsl:value-of select="$author"/>
 								<xsl:if test ="$cNoYear=0 or $volpagesInfo!=''">
-									<xsl:call-template name ="templ_prop_ListSeparator"/>
+									<xsl:call-template name ="templ_prop_Space"/>
 								</xsl:if>
 							</xsl:if>
 
@@ -7423,3 +7422,4 @@
 		</xsl:choose>
 	</xsl:template>
 </xsl:stylesheet>
+
