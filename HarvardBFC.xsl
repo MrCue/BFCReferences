@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="utf-8"?>
 
 <!-- Place this file in "%appdata%\Microsoft\Bibliography\Style" and restart MS Word -->
@@ -224,9 +225,6 @@
 							</b:ImportantField>
 							<b:ImportantField>
 								<xsl:text>b:Title</xsl:text>
-							</b:ImportantField>
-							<b:ImportantField>
-								<xsl:text>b:ProductionCompany</xsl:text>
 							</b:ImportantField>
 							<b:ImportantField>
 								<xsl:text>b:Year</xsl:text>
@@ -2326,9 +2324,8 @@
 		</xsl:variable>
 		<xsl:choose>
 			<xsl:when test ="$cProductionCompany!=0">
-				<i>
-					<xsl:value-of select="b:ProductionCompany"/>
-				</i>
+				<xsl:value-of select="b:ProductionCompany"/>
+				<xsl:call-template name ="templ_prop_Dot"/>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:call-template name ="templ_str_SineNomineShort"/>
@@ -4291,7 +4288,7 @@
 									<xsl:call-template name ="templ_prop_Space"/>
 								</xsl:when>
 								<xsl:when test ="$cAuthorMiddleName=0">
-									<xsl:call-template name ="templ_prop_Space"/>
+									<xsl:call-template name ="templ_prop_ListSeparator"/>
 								</xsl:when>
 								<xsl:when test ="$cAuthorMiddleName!=0">
 									<xsl:call-template name ="templ_prop_Space"/>
@@ -4556,7 +4553,7 @@
 				<xsl:call-template name ="templ_prop_Space"/>
 			</xsl:if>
 			<xsl:value-of select="b:Month"/>
-			<xsl:call-template name="templ_prop_Dot"/>
+			<xsl:call-template name ="templ_prop_ListSeparator"/>
 			<xsl:call-template name ="templ_prop_Space"/>
 		</xsl:if>
 	</xsl:template>
@@ -4777,10 +4774,7 @@
 		</xsl:variable>
 		<xsl:choose>
 			<xsl:when test ="$cYear=1">
-				<xsl:call-template name ="templ_prop_OpenBracket"/>
 				<xsl:value-of select = "b:Year"/>
-				<xsl:call-template name ="templ_prop_CloseBracket"/>
-				<xsl:call-template name ="templ_prop_Space"/>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:call-template name ="templ_str_NoDateShortUnCap"/>
@@ -4846,22 +4840,6 @@
 		</xsl:if>
 	</xsl:template>
 
-	<xsl:template name="BibDisplayTitleWebDoc">
-		<xsl:variable name="cTitle">
-			<xsl:value-of select="count(b:Title)"/>
-		</xsl:variable>
-		<xsl:if test ="$cTitle!=0">
-			<xsl:text>'</xsl:text>
-			<xsl:call-template name="right-trim">
-				<xsl:with-param name ="s" select="b:Title"/>
-			</xsl:call-template>
-			<xsl:call-template name ="templ_prop_Dot"/>
-			<xsl:text>'</xsl:text>
-			<xsl:call-template name ="templ_prop_ListSeparator"/>
-			<xsl:call-template name ="templ_prop_Space"/>
-		</xsl:if>
-	</xsl:template>
-
 	<xsl:template name="BibDisplayTitleInt">
 		<xsl:variable name="cTitle">
 			<xsl:value-of select="count(b:Title)"/>
@@ -4894,22 +4872,6 @@
 	</xsl:template>
 
 	<xsl:template name="BibDisplayTitleBC">
-		<xsl:variable name="cTitle">
-			<xsl:value-of select="count(b:Title)"/>
-		</xsl:variable>
-		<xsl:variable name ="cAuthors">
-			<xsl:value-of select ="count(b:Author/b:Author/b:NameList/b:Person)"/>
-		</xsl:variable>
-		<xsl:if test ="$cTitle!=0">
-			<xsl:value-of select="b:Title"/>
-			<xsl:call-template name ="templ_prop_Dot"/>
-			<xsl:if test ="$cAuthors!=0">
-				<xsl:call-template name ="templ_prop_Space"/>
-			</xsl:if>
-		</xsl:if>
-	</xsl:template>
-
-	<xsl:template name="BibDisplayWebName">
 		<xsl:variable name="cTitle">
 			<xsl:value-of select="count(b:Title)"/>
 		</xsl:variable>
@@ -5384,7 +5346,9 @@
 					<xsl:element name="p">
 						<xsl:call-template name ="BibAddParagraphAttributes"/>
 						<xsl:call-template name = "BibDisplayAuthor"/>
+						<xsl:text>(</xsl:text>
 							<xsl:call-template name = "BibDisplayYear"/>
+						<xsl:text>) </xsl:text>
 						<i>
 							<xsl:call-template name ="BibDisplayTitle"/>
 						</i>
@@ -5398,10 +5362,9 @@
 						<xsl:call-template name = "BibDisplayAuthor"/>
 						<xsl:call-template name = "BibDisplayYear"/>
 						<i>
-							<xsl:call-template name ="BibDisplayTitleWebDoc"/>
+							<xsl:call-template name ="BibDisplayTitle"/>
 						</i>
-						<xsl:call-template name ="BibDisplayProductionCompany"/>,
-						<xsl:call-template name ="BibDisplayDayMonth"/>
+						<xsl:call-template name ="BibDisplayStrOnline"/>
 						<xsl:call-template name ="BibDisplayURL"/>
 						<xsl:call-template name ="BibDisplayAccessedDates"/>
 					</xsl:element>
